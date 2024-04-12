@@ -20,8 +20,6 @@ public class City {
     private LocalDateTime lastUpdate;
     @Column(name = "capital")
     private Long capital;
-    @Column(name = "picture")
-    private String picture;
 
     public Long getId() {
         return id;
@@ -63,14 +61,6 @@ public class City {
         this.capital = capital;
     }
 
-    public String getPicture() {
-        return picture;
-    }
-
-    public void setPicture(String picture) {
-        this.picture = picture;
-    }
-
     @Override
     public String toString() {
         return "City{" +
@@ -79,7 +69,6 @@ public class City {
                 ", country=" + country +
                 ", lastUpdate=" + lastUpdate +
                 ", capital=" + capital +
-                ", picture='" + picture + '\'' +
                 '}';
     }
 }

@@ -29,7 +29,7 @@ public class CountryController {
         return countryService.readAll();
     }
 
-    @GetMapping(path="/id/{id}")
+    @GetMapping(path="/countries/{id}")
     public Country read(@PathVariable Long id) {
         Country result = countryService.read(id);
         if (result == null) {

@@ -11,5 +11,6 @@ public interface CityService {
     List<City> readAll();
     City update(City city);
     boolean delete(Long id);
+    List<City> contains(String contains);
 
 }

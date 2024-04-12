@@ -39,4 +39,8 @@ public class CityServiceImpl implements CityService {
     public boolean delete(Long id) {
         return false;
     }
+
+    public List<City> contains(String contains) {
+        return cityRepository.findByCityContaining(contains);
+    }
 }
