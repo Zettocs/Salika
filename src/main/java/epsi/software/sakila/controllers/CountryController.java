@@ -31,6 +31,12 @@ public class CountryController {
 
     @GetMapping(path="/id/{id}")
     public Country read(@PathVariable Long id) {
-        return countryService.read(id);
+        Country result = countryService.read(id);
+        if (result == null) {
+            log.error("Country with id " + id + " not found");
+            return null;
+        } else {
+            return result;
+        }
     }
 }
